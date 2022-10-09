@@ -1,9 +1,21 @@
+const path = require('path')
+const sourcePath = path.resolve(__dirname, 'src')
+
+
+console.log(sourcePath)
 module.exports = {
   siteMetadata: {
     title: `Angel Mas site`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-sass", {
+  plugins: [{
+    resolve: 'gatsby-plugin-sass',
+    options: { 
+      sassOptions: {
+        includePaths: [path.resolve(sourcePath, 'sass', 'resources.scss')]
+      }
+    }
+  }, {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
       "trackingId": "MySideTrackingId"
