@@ -8,29 +8,53 @@ import {
   ABOUT
 } from '../../router'
 
+import { FiAlignJustify } from 'react-icons/fi'
+import logo from '../../assets/images/logo.svg'
+
 const Navbar =  () => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to={APPLICATION_ROOT}>Home</Link>
-          </li>
-          <li>
-            <Link to={ABOUT}>About</Link>
-          </li>
-          <li>
-            <Link to={BEST_CONTENT}>Best Content</Link>
-          </li>
-          <li>
-            <Link to={BLOG}>Blog</Link>
-          </li>
-          <li>
-            <Link to={CONTACT}>Work with me</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav className="navbar">
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link to="/">
+            <img src={logo} alt="simply asx"/>
+          </Link>
+          <button className="nav-btn">
+            <FiAlignJustify />
+          </button>
+        </div>
+        <div className="nav-links show-links">
+          <Link 
+            to={APPLICATION_ROOT} 
+            className="nav-link" 
+            activeClassName="active-link"
+          >
+            Home
+          </Link>
+          <Link 
+            to={ABOUT} 
+            className="nav-link"
+            activeClassName="active-link"
+          >
+            About
+          </Link>
+          <Link 
+            to={BLOG} 
+            className="nav-link"
+            activeClassName="active-link"
+            >
+              Blog
+            </Link>
+            <Link 
+              to={BEST_CONTENT} 
+              className="nav-link"
+              activeClassName="active-link"
+            >
+            Contact
+            </Link>
+        </div>
+      </div>
+    </nav>
   )
 }
 

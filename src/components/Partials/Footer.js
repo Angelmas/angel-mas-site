@@ -1,25 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-import {
-  BLOG,
-  CONTACT,
-} from '../../router'
 
 const Navbar =  () => {
   return (
-    <div>
-      <p>loremp loremp loremp loremp</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to={BLOG}>Blog</Link>
-          </li>
-          <li>
-            <Link to={CONTACT}>Work with me</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <footer className="page-footer">
+      <p>
+        &copy; {new Date().getFullYear()}  <span>Angel Mas</span> Built with {" "} 
+        <a href="https://www.gatsbyjs.com/">Gatsby JS</a>
+      </p>
+    </footer>
   )
 }
 

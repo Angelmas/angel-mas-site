@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "./Header"
 import Footer from "./Footer"
 
-import '../../sass/resources.scss'
+import '../../assets/scss/resources.scss'
 
 const Layout = ({ children }) => {
   return (
