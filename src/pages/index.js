@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from '../components/Layout'
+import Layout from '../components/Partials/Layout'
 
 import './stylesheets/index.scss'
 
@@ -19,4 +19,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home | Angel Mas Site</title>
+export const Head = () => <title>Home | Angel Mas</title>

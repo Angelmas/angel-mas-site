@@ -1,5 +1,5 @@
 import * as React from "react"
-import Layout from "../components/Layout"
+import Layout from '../components/Partials/Layout'
 
 const ContactPage = () => {
   return (
@@ -11,4 +11,4 @@ const ContactPage = () => {
 
 export default ContactPage
 
-export const Head = () => <title>Contact Page</title>
+export const Head = () => <title>Contact | Angel Mas</title>

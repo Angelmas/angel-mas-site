@@ -1,5 +1,5 @@
 import * as React from "react"
-import Layout from "../components/Layout"
+import Layout from '../components/Partials/Layout'
 
 const BlogPage = () => {
   return (
@@ -11,4 +11,4 @@ const BlogPage = () => {
 
 export default BlogPage
 
-export const Head = () => <title>Blog | Angel Mas Site</title>
+export const Head = () => <title>Blog | Angel Mas</title>

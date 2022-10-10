@@ -1,5 +1,5 @@
 import * as React from "react"
-import Layout from '../components/Layout'
+import Layout from '../components/Partials/Layout'
 
 const AboutPage = () => {
   return (
@@ -11,4 +11,4 @@ const AboutPage = () => {
 
 export default AboutPage
 
-export const Head = () => <title>About</title>
+export const Head = () => <title>About | Angel Mas</title>
