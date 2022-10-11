@@ -1,40 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import {
   APPLICATION_ROOT,
+  ABOUT,
   BLOG,
-  CONTACT,
-  BEST_CONTENT,
-  ABOUT
 } from '../../router'
 
 import { FiAlignJustify } from 'react-icons/fi'
 import logo from '../../assets/images/logo.svg'
+import './Header.scss'
+
+export const ROOT_CLASS = 'navbar';
 
 const Navbar =  () => {
+  const [show, setShow] = useState(false)
+
   return (
-    <nav className="navbar">
+    <nav className={ROOT_CLASS}>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/">
-            <img src={logo} alt="simply asx"/>
+          <Link to={APPLICATION_ROOT}>
+            <img src={logo} alt="Angel"/>
           </Link>
-          <button className="nav-btn">
+          <button className="nav-btn" onClick={() => setShow(!show)}>
             <FiAlignJustify />
           </button>
         </div>
-        <div className="nav-links show-links">
-          <Link 
-            to={APPLICATION_ROOT} 
-            className="nav-link" 
-            activeClassName="active-link"
-          >
-            Home
-          </Link>
+        <div className={show ? "nav-links show-links" : "nav-links"}>
           <Link 
             to={ABOUT} 
             className="nav-link"
             activeClassName="active-link"
+            onClick={() => setShow(false)}
           >
             About
           </Link>
@@ -42,16 +39,10 @@ const Navbar =  () => {
             to={BLOG} 
             className="nav-link"
             activeClassName="active-link"
+            onClick={() => setShow(false)}
             >
               Blog
-            </Link>
-            <Link 
-              to={BEST_CONTENT} 
-              className="nav-link"
-              activeClassName="active-link"
-            >
-            Contact
-            </Link>
+          </Link>
         </div>
       </div>
     </nav>
